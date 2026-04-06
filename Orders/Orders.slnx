@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="Order.Frontend/Order.Frontend.csproj" />
   <Project Path="Order.Shared/Order.Shared.csproj" />
   <Project Path="Orders.Backend/Orders.Backend.csproj" />
+  <Project Path="Orders.Frontend/Orders.Frontend.csproj" />
 </Solution>

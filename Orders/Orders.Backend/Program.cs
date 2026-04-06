@@ -1,4 +1,7 @@
 
+using Microsoft.EntityFrameworkCore;
+using Orders.Backend.Data;
+
 namespace Orders.Backend
 {
     public class Program
@@ -13,6 +16,8 @@ namespace Orders.Backend
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            //Inyectamos el contexto de datos en el contenedor de servicios, indicando que se debe usar SQL Server y la cadena de conexión definida en appsettings.json
+            builder.Services.AddDbContext<DataContext>(x=>x.UseSqlServer("Name=LocalConnection"));
 
             var app = builder.Build();
 
